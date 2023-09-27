@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Proppins', sans-serif ;
+    background: url(image/bg.jpg);
+    background-size: cover;
+}
+
+ul
+{
+    list-style-type:none ;
+}
+ a
+ {
+    text-decoration: none;
+    color: aliceblue;
+ }
+
+h1
+{
+    color: #fffffc;
+    margin: 16px 0;
+    font-weight: 800;
+     
+}
+
+h3
+{
+     margin: 8px 0 ;
+     font-weight: 800;
+}
+
+p
+{
+    margin: 36px ;
+    list-style : none;
+    font-weight: 400;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px ;
+}
+
+/* navigation */
+header
+{
+    line-height: 100px;
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+nav ul li
+{
+    display: inline;
+    padding: 0 16px;
+}
+
+nav ul li a
+{
+    color: #282828 ;
+}
+
+.mobile
+{
+    display: none;
+}
+
+.show
+{
+    display: block;
+}
+
+@media (max-width:768px)
+{
+    nav {
+        position: static;
+    }
+    nav ul
+    {
+        display: none;
+        width: 100%;
+        background-color: gray;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 50vh;
+        text-align: center;
+    }
+
+    nav ul li
+    {
+        display: block;
+    }
+
+    nav ul li a
+    {
+        color: #fffffc;
+        display: block;
+    }
+    a.mobile
+    {
+        color: #202020;
+        display: block;
+        font-size: 32px;
+    }
+
+}
+
+
+/* Aside */
+aside
+{
+    padding: 54px;
+}
+aside .comments,.archives
+{
+     margin-top: 64px;
+}
+
+/* blog */
+.blog-post a
+{
+   color: dodgerblue; 
+   
+}
+
+.blog-post
+{
+    padding: 32px ;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: 100px auto 100px;
+      height: 100Vh;
+      width: 70%;
+      margin: 0 auto;
+
+}
+
+header
+{
+    background-color: #f9f9f9;
+    grid-column-start: 1;
+    grid-column-end: 4 ;
+}
+
+aside
+{
+background-color: #313333;
+grid-column-start:  span 1;
+}
+
+main
+{
+    background-color: #fffffc;
+    grid-column: span 2;
+}
+
+footer
+{
+    background-color: #f9f9f9;
+
+    grid-column: span 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h1
+{
+    color: #202020;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px)
+ {
+    .container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+        width: 100%;
+        }
+
+        header, aside, main, footer
+        {
+            grid-column: span 1;
+        }
+}
